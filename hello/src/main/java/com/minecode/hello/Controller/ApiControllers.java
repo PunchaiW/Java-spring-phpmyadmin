@@ -31,9 +31,9 @@ public class ApiControllers {
     }
 
     @PostMapping(value = "/save")
-    public String saveBook(@RequestBody Book book){
+    public Book saveBook(@RequestBody Book book){
         bookRepo.save(book);
-        return "Saved...";
+        return book;
     }
 
     @PutMapping(value = "update/{id}")
